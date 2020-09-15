@@ -1,10 +1,8 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 
 function App() {
-  const [input, setInput] = useState("");
   const [resultText, setResultText] = useState("");
 
   let [operand1, setOperand1] = useState(0);
@@ -14,11 +12,6 @@ function App() {
   let [operand3, setOperand3] = useState(0);
   let [check3, setCheck3] = useState(false);
 
-  let checkCount = 0;
-
-  const addCheck = () => {
-    
-  }
   const validate = () => {
     console.log(check1)
     console.log(check2)
@@ -82,6 +75,9 @@ function App() {
             } else if (!check1 && check2 && check3) {
               setResultText(operand2 / operand3);
             }
+            break;
+          default:
+            alert("wrong operator!");
             break;
     }
   };
